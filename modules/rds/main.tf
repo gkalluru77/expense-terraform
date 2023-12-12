@@ -41,8 +41,8 @@ resource "aws_security_group" "main" {
   engine               = var.rds_engine
   engine_version       = var.rds_engine_version
   instance_class       = var.rds_instance_class
-  username             = "foo"
-  password             = "foobarbaz"
+  username             = data.aws_ssm_parameter.username.value
+  password             = data.aws_ssm_parameter.password.value
   parameter_group_name = "aws_dax_parameter_group.main.name"
   skip_final_snapshot  = true
   multi_az           =true
