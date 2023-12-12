@@ -43,7 +43,7 @@ resource "aws_security_group" "main" {
   instance_class       = var.rds_instance_class
   username             = data.aws_ssm_parameter.username.value
   password             = data.aws_ssm_parameter.password.value
-  parameter_group_name = "aws_dax_parameter_group.main.name"
+  parameter_group_name = aws_db_parameter_group.main.name
   skip_final_snapshot  = true
   multi_az           =true
   identifier         = "${var.env}-mysql-rds"
