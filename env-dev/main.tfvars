@@ -17,4 +17,11 @@ default_vpc_id  = "vpc-0747fb96b932413c7"
 default_route_table_id = "rtb-0850b348c0d8d2e8f"
 default_vpc_cidr       = "172.31.0.0/16"
 
+rds_allocated_storage        =20
+rds_engine               = "mysql"
+rds_engine_version      ="5.7.44"
+rds_instance_class      ="db.t3.micro"
+
+
+
 
