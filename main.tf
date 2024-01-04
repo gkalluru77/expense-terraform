@@ -30,4 +30,19 @@ module "rds" {
 }
 
 
+module "backend" {
+  source = "./modules/app"
+
+  app_port = var.backend["app_port"]
+  component = "backend"
+  env = var.env
+  instance_count = var.backend["instance_count"]
+  instance_type = var.backend["instance_type"]
+  sg_cidr = var.web_subnets
+  subnets = module.vpc.app_subnets
+  tags = var.tags
+  vpc_id = module.vpc.vpc_id
+}
+
+
 
