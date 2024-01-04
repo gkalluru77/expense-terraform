@@ -38,8 +38,7 @@ resource "aws_autoscaling_group" "main" {
   min_size           = var.instance_count
   vpc_zone_identifier = var.subnets
 
-
-  launch_template = {
+  launch_template  {
     id      = "${aws_launch_template.main.id}"
     version = "$Latest"
   }
