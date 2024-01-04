@@ -28,6 +28,7 @@ instance_count=1
 instance_type="t3.micro"
 }
 
+bastion_cidrs = ["172.31.43.205/32"]
 
 
 
