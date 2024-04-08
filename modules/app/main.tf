@@ -107,7 +107,7 @@ resource "aws_iam_role" "main" {
             "arn:aws:ssm:us-east-1:878283146072:parameter/${var.env}.rds.*",
             "arn:aws:ssm:us-east-1:878283146072:parameter/grafana.api_key",
             "arn:aws:ssm:us-east-1:878283146072:parameter/jenkins.*",
-            "arn:aws:ssm:us-east-1:878283146072:parameter/frontend.dev.BACKEND_ENDPOINT",
+
           ]
         },
           {
