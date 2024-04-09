@@ -68,6 +68,13 @@ resource "aws_autoscaling_group" "main" {
   }
 }
 
+resource "aws_lb_target_group" "main" {
+  name                 = "${var.env}-${var.component}"
+  port                 = var.app_port
+  protocol             = "HTTP"
+  vpc_id               = var.vpc_id
+  }
+
 resource "aws_iam_role" "main" {
   name = "${var.env}-${var.component}"
   tags = merge(var.tags, { Name = "${var.env}-${var.component}" })
