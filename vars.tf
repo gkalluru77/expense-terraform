@@ -20,4 +20,5 @@ variable "backend" {}
 variable "bastion_cidrs" {}
 variable "frontend" {}
 variable "public-alb" {}
+variable "backend-alb" {}
 //variable "lb_port" {}
